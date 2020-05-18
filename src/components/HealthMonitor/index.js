@@ -82,7 +82,7 @@ export const HealthCheck = ({ config }) => {
                   title={`${name} ${resourceName} is down`}
                   options={{
                     tag: Date.now(),
-                    body: 'Hello' + new Date(),
+                    body: new Date(),
                     icon: null,
                     lang: "en",
                     dir: "ltr",
