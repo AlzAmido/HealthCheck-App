@@ -53,22 +53,22 @@
     "name": "CI EUN",
     "endpoints": [
       {
-        "url": "http://origin-sx-eun.deploy.systems.next/footer",
+        "url": "https://origin-ci-browse-cloud-eun.origins.systems.next/footer",
         "resourceName": "Footer",
         "mayReceiveWarnings": true
       },
       {
-        "url": "http://origin-sx-eun.deploy.systems.next/header",
+        "url": "https://origin-ci-browse-cloud-eun.origins.systems.next/header",
         "resourceName": "Header",
         "mayReceiveWarnings": true
       },
       {
-        "url": "http://origin-sx-eun.deploy.systems.next/shop/gender-women-productaffiliation-coatsandjackets-0",
+        "url": "https://origin-ci-browse-cloud-eun.origins.systems.next/shop/gender-women-productaffiliation-coatsandjackets-0",
         "resourceName": "PLP",
         "mayReceiveWarnings": true
       },
       {
-        "url": "http://origin-sx-eun.deploy.systems.next/product-summary/122589",
+        "url": "https://origin-ci-browse-cloud-eun.origins.systems.next/product-summary/122589",
         "resourceName": "Product Summary",
         "mayReceiveWarnings": true
       }
@@ -78,22 +78,22 @@
     "name": "CI EUW",
     "endpoints": [
       {
-        "url": "http://origin-sx-euw.deploy.systems.next/footer",
+        "url": "https://origin-ci-browse-cloud-euw.origins.systems.next/footer",
         "resourceName": "Footer",
         "mayReceiveWarnings": true
       },
       {
-        "url": "http://origin-sx-euw.deploy.systems.next/header",
+        "url": "https://origin-ci-browse-cloud-euw.origins.systems.next/header",
         "resourceName": "Header",
         "mayReceiveWarnings": true
       },
       {
-        "url": "http://origin-sx-euw.deploy.systems.next/shop/gender-women-productaffiliation-coatsandjackets-0",
+        "url": "https://origin-ci-browse-cloud-euw.origins.systems.next/shop/gender-women-productaffiliation-coatsandjackets-0",
         "resourceName": "PLP",
         "mayReceiveWarnings": true
       },
       {
-        "url": "http://origin-sx-euw.deploy.systems.next/product-summary/122589",
+        "url": "https://origin-ci-browse-cloud-euw.origins.systems.next/product-summary/122589",
         "resourceName": "Product Summary",
         "mayReceiveWarnings": true
       }
