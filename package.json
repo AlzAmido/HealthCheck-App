@@ -6,13 +6,21 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
+    "axios": "^0.19.2",
+    "express": "^4.17.1",
+    "morgan": "^1.10.0",
+    "npm-run-all": "^4.1.5",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-loader-spinner": "^3.1.14",
     "react-scripts": "3.4.1",
+    "react-web-notification": "^0.8.0",
     "styled-components": "^5.1.0"
   },
   "scripts": {
+    "all": "npm-run-all -p server start",
     "start": "react-scripts start",
+    "server": "node server.js",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

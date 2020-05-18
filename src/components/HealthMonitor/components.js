@@ -13,10 +13,10 @@ export const EnvironmentContainer = styled.div`
   display: flex;
   flex-direction: column;
   border-radius: 5px;
-  width:49%;
-  margin: .2rem;
+  width: 49%;
+  margin: 0.2rem;
   border: 1px solid #eee;
-  @media(max-width: 950px) {
+  @media (max-width: 950px) {
     width: 100%;
   }
 `;
@@ -24,5 +24,11 @@ export const EnvironmentContainer = styled.div`
 export const EndpointContainer = styled.div`
   background-color: ${(props) => props.background};
   display: flex;
-  padding:.5rem;
+  padding: 0.5rem;
+  margin: 0.1rem;
+  justify-content: space-between;
+`;
+
+export const Endpoint = styled.span`
+  font-size: 1.2rem;
 `;
