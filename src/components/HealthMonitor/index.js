@@ -1,58 +1,19 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Loader from "react-loader-spinner";
-import axios from "axios";
 import Notification from "react-web-notification";
 import {
   HealthCheckContainer,
   EndpointContainer,
   EnvironmentContainer,
-  Endpoint,
+  Endpoint
 } from "./components";
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
-let notifications = false
-const initialiseState = (config) => {
-  let initialState = {};
-  config.forEach(({ name, endpoints }) => {
-    initialState[name] = {};
-    endpoints.forEach(({ resourceName }) => {
-      initialState[name][resourceName] = null;
-    });
-  });
-  console.log("initialiseState");
-  return initialState;
-};
+import useZonesReducer from "./zones-reducer";
 
-const isUp = async (url) => {
-  try {
-    const res = await axios.get(`http://localhost:3333/?url=${url}`);
-    return res.data === "OK";
-  } catch {
-    return false;
-  }
-};
-
-const checkState = async (config, state) => {
-  config.forEach(async ({ name, endpoints }) => {
-    endpoints.forEach(async ({ url, resourceName }) => {
-      state[name][resourceName] = (await isUp(url)) ? "green" : "red";
-    });
-  });
-};
+let notifications = false;
 
 export const HealthCheck = ({ config }) => {
-  const initialState = () => initialiseState(config);
-  const [state] = useState(initialState);
-  const [i, setIteration] = useState(0);
-
-  useEffect(() => {
-    let timeout;
-    checkState(config, state);
-    timeout = setTimeout(() => setIteration(i + 1), 10000);
-    return () => {
-      clearTimeout(timeout);
-    };
-  }, [i]);
-
+  const { state } = useZonesReducer(config);
   return (
     <HealthCheckContainer>
       {config.map(({ name, endpoints }) => (
@@ -77,7 +38,9 @@ export const HealthCheck = ({ config }) => {
               {state[name][resourceName] === "red" && (
                 <Notification
                   ignore={notifications}
-                  onClose={()=>{notifications = true}}
+                  onClose={() => {
+                    notifications = true;
+                  }}
                   timeout={10000}
                   title={`${name} ${resourceName} is down`}
                   options={{
@@ -85,7 +48,7 @@ export const HealthCheck = ({ config }) => {
                     body: new Date(),
                     icon: null,
                     lang: "en",
-                    dir: "ltr",
+                    dir: "ltr"
                   }}
                 />
               )}
