@@ -1,7 +1,9 @@
 import { useReducer, useEffect } from "react";
 import axios from "axios";
 
-const initialiseState = config => {
+ const INTERVAL = 30 //seconds
+
+const initialiseState = (config) => {
   let initialState = {};
   config.forEach(({ name, endpoints }) => {
     initialState[name] = {};
@@ -13,20 +15,22 @@ const initialiseState = config => {
   return initialState;
 };
 
-const isUp = async url => {
-  try {
-    const res = await axios.get(`http://localhost:3333/?url=${url}`);
-    return res.data === "OK";
-  } catch {
-    return false;
+const isUp = async (url) => {
+  if (url) {
+    try {
+      const res = await axios.get(`http://localhost:3333/?url=${url}`);
+      return res.data === "OK";
+    } catch {
+      return false;
+    }
   }
 };
-const flattenZones = zones =>
+const flattenZones = (zones) =>
   zones
-    .map(zone =>
-      zone.endpoints.map(endpoint => ({
+    .map((zone) =>
+      zone.endpoints.map((endpoint) => ({
         ...endpoint,
-        sandBoxName: zone.name
+        sandBoxName: zone.name,
       }))
     )
     .reduce((acc, next) => acc.concat(next), []);
@@ -39,12 +43,12 @@ const reducer = (state, action) => {
         ...state,
         [sandBoxName]: {
           ...state[sandBoxName],
-          [resourceName]: status
-        }
+          [resourceName]: status,
+        },
       };
   }
 };
-const useCheckState = config => {
+const useCheckState = (config) => {
   const initialState = () => initialiseState(config); //not great
   const initState = initialState();
   const [state, dispatch] = useReducer(reducer, initState);
@@ -52,7 +56,7 @@ const useCheckState = config => {
 
   useEffect(() => {
     const run = () => {
-      zones.map(async machine => {
+      zones.map(async (machine) => {
         const status = (await isUp(machine.url)) ? "green" : "red";
         dispatch({ type: "SET", payload: { ...machine, status } });
       });
@@ -61,7 +65,7 @@ const useCheckState = config => {
     run();
     setInterval(() => {
       run();
-    }, 10000);
+    }, INTERVAL * 1000);
   }, []);
 
   return { state };

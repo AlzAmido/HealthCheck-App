@@ -18,7 +18,7 @@
     "styled-components": "^5.1.0"
   },
   "scripts": {
-    "all": "npm-run-all -p server start",
+    "all": "PORT=3331 npm-run-all -p server start",
     "start": "react-scripts start",
     "server": "node server.js",
     "build": "react-scripts build",
