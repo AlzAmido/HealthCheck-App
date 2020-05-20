@@ -1,3 +1,5 @@
+![Batman is not a superhero](example.png?raw=true "Batman is not a superhero")
+
 ## Available Scripts
 
 In the project directory, you can run:
