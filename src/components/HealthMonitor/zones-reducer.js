@@ -11,7 +11,6 @@ const initialiseState = (config) => {
       initialState[name][resourceName] = null;
     });
   });
-  console.log("initialiseState");
   return initialState;
 };
 
@@ -48,7 +47,7 @@ const reducer = (state, action) => {
       };
   }
 };
-const useCheckState = (config) => {
+const useCheckState = (config, interval) => {
   const initialState = () => initialiseState(config); //not great
   const initState = initialState();
   const [state, dispatch] = useReducer(reducer, initState);
@@ -65,8 +64,8 @@ const useCheckState = (config) => {
     run();
     setInterval(() => {
       run();
-    }, INTERVAL * 1000);
-  }, []);
+    }, (interval || INTERVAL) * 1000);
+  }, [interval]);
 
   return { state };
 };

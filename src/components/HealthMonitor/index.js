@@ -13,8 +13,8 @@ import useZonesReducer from "./zones-reducer";
 
 let notifications = false;
 
-export const HealthCheck = ({ config }) => {
-  const { state } = useZonesReducer(config);
+export const HealthCheck = ({ config, interval }) => {
+  const { state } = useZonesReducer(config, interval);
   return (
     <HealthCheckContainer>
       {config.map(({ name, endpoints }) => (

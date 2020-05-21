@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import HealthCheck from "./components/HealthMonitor";
+import IntervalSelector from "./components/IntervalSelector";
 import config from "./config.json";
 
 //Make sure that babel-polyfill is only required in once
@@ -8,9 +9,14 @@ import config from "./config.json";
 // }
 
 function App() {
+  const initialInterval = localStorage.getItem("healthcheck-interval");
+  const [interval, setInterval] = useState(
+    initialInterval ? parseInt(initialInterval) : 30
+  );
   return (
     <div className="App">
-      <HealthCheck config={config} />
+      <IntervalSelector interval={interval} callback={setInterval} />
+      <HealthCheck config={config} interval={interval} />
     </div>
   );
 }
