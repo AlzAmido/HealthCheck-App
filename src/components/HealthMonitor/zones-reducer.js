@@ -1,7 +1,9 @@
 import { useReducer, useEffect } from "react";
 import axios from "axios";
 
- const INTERVAL = 30 //seconds
+const INTERVAL = 30; //seconds
+
+
 
 const initialiseState = (config) => {
   let initialState = {};
@@ -17,8 +19,8 @@ const initialiseState = (config) => {
 const isUp = async (url) => {
   if (url) {
     try {
-      const res = await axios.get(`http://localhost:3333/?url=${url}`);
-      return res.data === "OK";
+      const res = await axios.get(url);
+      return res.status === 200;
     } catch {
       return false;
     }
