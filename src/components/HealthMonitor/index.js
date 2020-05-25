@@ -1,68 +1,26 @@
 import React from "react";
-import Notification from "react-web-notification";
-import {
-  HealthCheckContainer,
-  EndpointContainer,
-  EnvironmentContainer,
-  Endpoint,
-  GoButton,
-  Loading
-} from "./components";
+import { HealthCheckContainer, EnvironmentContainer } from "./components";
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
-import useZonesReducer from "./zones-reducer";
+import Endpoint from "../Endpoint";
 
-let notifications = false;
-
-export const HealthCheck = ({ config, interval }) => {
-  const { state } = useZonesReducer(config, interval);
-  return (
-    <HealthCheckContainer>
-      {config.map(({ name, endpoints }) => (
-        <EnvironmentContainer key={name}>
-          <h3>{name}</h3>
-          {endpoints.map(({ url, resourceName, mayReceiveWarnings }) => (
-            <EndpointContainer
-              key={`${name}-${resourceName}`}
-              background={state[name][resourceName]}
-            >
-              <Endpoint>{resourceName}</Endpoint>
-              <div style={{display:"flex", flexDirection:"row"}}>
-                {!state[name][resourceName] && (
-                  <Loading
-                    type="Puff"
-                    color="#00BFFF"
-                    height={20}
-                    width={20}
-                    timeout={0}
-                  />
-                )}
-                <GoButton href={url} target="_blank">
-                  Go to app
-                </GoButton>
-              </div>
-              {state[name][resourceName] === "red" && (
-                <Notification
-                  ignore={notifications}
-                  onClose={() => {
-                    notifications = true;
-                  }}
-                  timeout={10000}
-                  title={`${name} ${resourceName} is down`}
-                  options={{
-                    tag: Date.now(),
-                    body: new Date(),
-                    icon: null,
-                    lang: "en",
-                    dir: "ltr",
-                  }}
-                />
-              )}
-            </EndpointContainer>
-          ))}
-        </EnvironmentContainer>
-      ))}
-    </HealthCheckContainer>
-  );
-};
+export const HealthCheck = ({ config, interval }) => (
+  <HealthCheckContainer>
+    {config.map(({ name, endpoints }) => (
+      <EnvironmentContainer key={name}>
+        <h3>{name}</h3>
+        {endpoints.map((item) => (
+          <Endpoint
+            interval={interval}
+            machineName={name}
+            url={item.url}
+            resourceName={item.resourceName}
+            initialState={null}
+            mayReceiveWarnings={item.mayReceiveWarnings}
+          />
+        ))}
+      </EnvironmentContainer>
+    ))}
+  </HealthCheckContainer>
+);
 
 export default HealthCheck;

@@ -14,7 +14,7 @@ app.get("/", async (req, res) => {
   res.setHeader("Content-Type", "text/html; charset=UTF-8");
   res.setHeader("Access-Control-Allow-Origin", "*");
   try {
-    const data = await axios.get(req.query.url);
+    const data = await axios.get(req.query.url, {timeout: 5000});
     res.send(data.status);
   } catch (err) {
     res.status(500).end();

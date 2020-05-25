@@ -14,6 +14,7 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-loader-spinner": "^3.1.14",
+    "react-modal": "^3.11.2",
     "react-scripts": "3.4.1",
     "react-web-notification": "^0.8.0",
     "styled-components": "^5.1.0"
