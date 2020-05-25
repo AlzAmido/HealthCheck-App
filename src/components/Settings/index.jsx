@@ -1,101 +1,75 @@
 import React, { useState } from "react";
 import ReactModal from "react-modal";
+import { Container } from "./components";
 
-export const Settings = (initialConfig) => {
-  const currentConfig = localStorage.get("healthcheck-monitor-config");
-  const config = currentConfig || initialConfig;
+const CONFIG_KEY = "healthcheck-monitor-config";
+
+export const Settings = ({ initialConfig, setConfig }) => {
+  const currentConfig = localStorage.getItem(CONFIG_KEY);
+  let config = currentConfig ? JSON.parse(currentConfig) : initialConfig;
   const [isOpen, toggleModal] = useState(false);
+  const updateConfig = () => {
+    localStorage.setItem(CONFIG_KEY, JSON.stringify(config));
+    setConfig(config);
+  };
   return (
-    <>
+    <Container>
       <button onClick={(e) => toggleModal(!isOpen)}>config</button>
 
       <ReactModal
-        isOpen={
-          isOpen
-          /* Boolean describing if the modal should be shown or not. */
-        }
-        style={
-          { overlay: {}, content: {} }
-          /* Object indicating styles to be used for the modal.
-   It has two keys, `overlay` and `content`.
-   See the `Styles` section for more details. */
-        }
+        isOpen={isOpen}
+        onAfterClose={updateConfig}
+        style={{
+          overlay: {
+            position: "fixed",
+            top: 0,
+            left: 0,
+            right: 0,
+            bottom: 0,
+            backgroundColor: "rgba(255, 255, 255, 0.75)",
+          },
+          content: {
+            position: "absolute",
+            top: "40px",
+            left: "40px",
+            right: "40px",
+            bottom: "40px",
+            border: "1px solid #ccc",
+            background: "#fff",
+            overflow: "auto",
+            WebkitOverflowScrolling: "touch",
+            borderRadius: "4px",
+            outline: "none",
+            padding: "20px",
+          },
+        }}
         contentLabel={"Example Modal"}
         portalClassName={"ReactModalPortal"}
         overlayClassName={"ReactModal__Overlay"}
         id={"some-id"}
         className={"ReactModal__Content"}
-        bodyOpenClassName={
-          "ReactModal__Body--open"
-          /* String className to be applied to the document.body 
-   (must be a constant string).
-   This attribute when set as `null` doesn't add any class 
-   to document.body.
-   See the `Styles` section for more details. */
-        }
-        htmlOpenClassName={
-          "ReactModal__Html--open"
-          /* String className to be applied to the document.html
-   (must be a constant string).
-   This attribute is `null` by default.
-   See the `Styles` section for more details. */
-        }
-        ariaHideApp={
-          true
-          /* Boolean indicating if the appElement should be hidden */
-        }
-        shouldFocusAfterRender={
-          true
-          /* Boolean indicating if the modal should be focused after render. */
-        }
-        shouldCloseOnOverlayClick={
-          true
-          /* Boolean indicating if the overlay should close the modal */
-        }
-        shouldCloseOnEsc={
-          true
-          /* Boolean indicating if pressing the esc key should close the modal
-   Note: By disabling the esc key from closing the modal
-   you may introduce an accessibility issue. */
-        }
-        shouldReturnFocusAfterClose={
-          true
-          /* Boolean indicating if the modal should restore focus to the element
-   that had focus prior to its display. */
-        }
-        role={
-          "dialog"
-          /* String indicating the role of the modal, allowing the 'dialog' role
-   to be applied if desired.
-   This attribute is `dialog` by default. */
-        }
-        parentSelector={
-          () => document.body
-          /* Function that will be called to get the parent element
-   that the modal will be attached to. */
-        }
-        aria={
-          {
-            labelledby: "heading",
-            describedby: "full_description",
-          }
-          /* Additional aria attributes (optional). */
-        }
-        data={
-          { background: "green" }
-          /* Additional data attributes (optional). */
-        }
-        // overlayRef={
-        //   setOverlayRef
-        //   /* Overlay ref callback. */
-        // }
-        // contentRef={
-        //   setContentRef
-        //   /* Content ref callback. */
-        // }
+        bodyOpenClassName={"ReactModal__Body--open"}
+        htmlOpenClassName={"ReactModal__Html--open"}
+        ariaHideApp={false}
+        shouldFocusAfterRender={true}
+        shouldCloseOnOverlayClick={true}
+        shouldCloseOnEsc={true}
+        shouldReturnFocusAfterClose={true}
+        role={"dialog"}
+        parentSelector={() => document.body}
+        aria={{
+          labelledby: "heading",
+          describedby: "full_description",
+        }}
+        data={{ background: "green" }}
       >
-        <p>Modal Content</p>
+        <h1 style={{ display: "flex", justifyContent: "space-between" }}>
+          <span>Configuration</span>
+          <button onClick={() => toggleModal(false)}>X</button>
+        </h1>
       </ReactModal>
-    </>
+    </Container>
   );
 };
+
+export default Settings;

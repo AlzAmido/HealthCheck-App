@@ -1,24 +1,22 @@
 import React from "react";
+import { Container } from "./components";
 
 export const IntervalSelector = ({ interval, callback }) => {
   const updateInterval = (e) => {
     callback(e.target.value);
     localStorage.setItem("healthcheck-interval", e.target.value);
   };
-  console.log(interval)
+  console.log(interval);
   return (
-    <div
-      style={{
-        display: "flex",
-        justifyContent: "center",
-        marginTop: "1rem",
-        color: "#ececec",
-      }}
-    >
-      <label style={{ paddingRight: ".5rem" }} htmlFor="updateInterval">
+    <Container>
+      <label htmlFor="updateInterval">
         Update Interval
       </label>
-      <select name="updateInterval" defaultValue={interval} onChange={updateInterval}>
+      <select
+        name="updateInterval"
+        defaultValue={interval}
+        onChange={updateInterval}
+      >
         <option value={5}>5s</option>
         <option value={10}>10s</option>
         <option value={15}>15s</option>
@@ -32,7 +30,7 @@ export const IntervalSelector = ({ interval, callback }) => {
         <option value={900}>15min</option>
         <option value={1800}>30min</option>
       </select>
-    </div>
+    </Container>
   );
 };
 
