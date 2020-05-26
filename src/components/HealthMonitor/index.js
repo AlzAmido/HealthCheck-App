@@ -10,6 +10,7 @@ export const HealthCheck = ({ config, interval }) => (
         <h3>{name}</h3>
         {endpoints.map((item) => (
           <Endpoint
+            key={item.resourceName}
             interval={interval}
             machineName={name}
             url={item.url}

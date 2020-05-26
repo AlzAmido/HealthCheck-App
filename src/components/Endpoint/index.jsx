@@ -3,12 +3,17 @@ import Notification from "react-web-notification";
 import axios from "axios";
 import { Endpoint, EndpointContainer, GoButton, Loading } from "./components";
 
+const DEFAULT_INTERVAL = 30 // seconds
+
 let ignoreNotifications = false;
 
-const isUp = async (url) => {
+const isUp = async (url, interval) => {
   if (url) {
     try {
-      const res = await axios.get(`http://localhost:3333/?url=${url}`);
+      const res = await axios.get(
+        `http://localhost:3333/?url=${url}&ttl=${interval}`,
+        { timeout: (interval || DEFAULT_INTERVAL) * 1000 + 10 } // adding 10ms to make sure server-side ends first
+      );
       return res.data === "OK";
     } catch {
       return false;
@@ -28,7 +33,7 @@ export default ({
   const [loading, setLoading] = useState(true);
   useEffect(() => {
     const run = async () => {
-      const newState = (await isUp(url)) ? "green" : "red";
+      const newState = (await isUp(url, interval || DEFAULT_INTERVAL)) ? "green" : "red";
       setState(newState);
       setLoading(false);
     };
@@ -37,7 +42,7 @@ export default ({
     let currentTimeout = setInterval(() => {
       setLoading(true);
       run();
-    }, (interval || 30) * 1000);
+    }, (interval || DEFAULT_INTERVAL) * 1000);
     return () => {
       clearInterval(currentTimeout);
     };
