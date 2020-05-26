@@ -3,6 +3,8 @@
 
 ## How to make it work
 
+Assuming you have Node.JS installed on your machine (well if you don't here's a link for you -> [Node.JS download](https://nodejs.org/en/download/) ):
+
 In the project directory, you can run:
 
 ### `npm i`
