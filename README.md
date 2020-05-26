@@ -1,3 +1,6 @@
+![Example](https://github.com/AlzAmido/HealthCheck-App/blob/master/example.png)
+
+
 ## How to make it work
 
 In the project directory, you can run:
