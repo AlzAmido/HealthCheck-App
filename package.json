@@ -17,6 +17,7 @@
     "react-modal": "^3.11.2",
     "react-scripts": "3.4.1",
     "react-web-notification": "^0.8.0",
+    "response-time": "^2.3.2",
     "styled-components": "^5.1.0"
   },
   "scripts": {

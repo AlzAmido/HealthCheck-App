@@ -11,6 +11,7 @@ export const HealthCheck = ({ config, interval }) => (
         {endpoints.map((item) => (
           <Endpoint
             key={item.resourceName}
+            isHtml={item.htmlCheck}
             interval={interval}
             machineName={name}
             url={item.url}

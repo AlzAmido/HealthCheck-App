@@ -1,71 +1,349 @@
 [
   {
-    "name": "Sandbox EUN",
+    "name": "Sandbox EUN UI",
     "endpoints": [
       {
         "url": "http://bbc.co.uk",
-        "resourceName": "bbc.co.uk",
-        "mayReceiveWarnings": true
+        "resourceName": "Footer",
+        "mayReceiveWarnings": true,
+        "htmlCheck": true
+      },
+      {
+        "url": "http://bbc.co.uk",
+        "resourceName": "Header",
+        "mayReceiveWarnings": true,
+        "htmlCheck": true
+      },
+      {
+        "url": "http://bbc.co.uk",
+        "resourceName": "PLP",
+        "mayReceiveWarnings": true,
+        "htmlCheck": true
+      },
+      {
+        "url": "http://bbc.co.uk",
+        "resourceName": "Product Summary",
+        "mayReceiveWarnings": true,
+        "htmlCheck": true
       }
     ]
   },
   {
-    "name": "Sandbox EUW",
+    "name": "Sandbox EUN API (health)",
     "endpoints": [
       {
         "url": "http://bbc.co.uk",
-        "resourceName": "bbc.co.uk",
-        "mayReceiveWarnings": true
+        "resourceName": "Footer",
+        "mayReceiveWarnings": true,
+        "htmlCheck": false
+      },
+      {
+        "url": "http://bbc.co.uk",
+        "resourceName": "Header",
+        "mayReceiveWarnings": true,
+        "htmlCheck": false
+      },
+      {
+        "url": "http://bbc.co.uk",
+        "resourceName": "PLP",
+        "mayReceiveWarnings": true,
+        "htmlCheck": false
+      },
+      {
+        "url": "http://bbc.co.uk",
+        "resourceName": "Product Summary",
+        "mayReceiveWarnings": true,
+        "htmlCheck": false
       }
     ]
   },
   {
-    "name": "CI EUN",
+    "name": "Sandbox EUW UI",
     "endpoints": [
       {
         "url": "http://bbc.co.uk",
-        "resourceName": "bbc.co.uk",
-        "mayReceiveWarnings": true
+        "resourceName": "Footer",
+        "mayReceiveWarnings": true,
+        "htmlCheck": true
       },
       {
         "url": "http://bbc.co.uk",
-        "resourceName": "bbc.co.uk",
-        "mayReceiveWarnings": true
+        "resourceName": "Header",
+        "mayReceiveWarnings": true,
+        "htmlCheck": true
       },
       {
         "url": "http://bbc.co.uk",
-        "resourceName": "bbc.co.uk",
-        "mayReceiveWarnings": true
+        "resourceName": "PLP",
+        "mayReceiveWarnings": true,
+        "htmlCheck": true
       },
       {
         "url": "http://bbc.co.uk",
-        "resourceName": "bbc.co.uk",
-        "mayReceiveWarnings": true
+        "resourceName": "Product Summary",
+        "mayReceiveWarnings": true,
+        "htmlCheck": true
       }
     ]
   },
   {
-    "name": "CI EUW",
+    "name": "Sandbox EUW API (health)",
     "endpoints": [
       {
         "url": "http://bbc.co.uk",
-        "resourceName": "bbc.co.uk",
-        "mayReceiveWarnings": true
+        "resourceName": "Footer",
+        "mayReceiveWarnings": true,
+        "htmlCheck": false
       },
       {
         "url": "http://bbc.co.uk",
-        "resourceName": "bbc.co.uk",
-        "mayReceiveWarnings": true
+        "resourceName": "Header",
+        "mayReceiveWarnings": true,
+        "htmlCheck": false
       },
       {
         "url": "http://bbc.co.uk",
-        "resourceName": "bbc.co.uk",
-        "mayReceiveWarnings": true
+        "resourceName": "PLP",
+        "mayReceiveWarnings": true,
+        "htmlCheck": false
       },
       {
         "url": "http://bbc.co.uk",
-        "resourceName": "bbc.co.uk",
-        "mayReceiveWarnings": true
+        "resourceName": "Product Summary",
+        "mayReceiveWarnings": true,
+        "htmlCheck": false
+      }
+    ]
+  },
+  {
+    "name": "CI EUN UI",
+    "endpoints": [
+      {
+        "url": "http://bbc.co.uk",
+        "resourceName": "Footer",
+        "mayReceiveWarnings": true,
+        "htmlCheck": true
+      },
+      {
+        "url": "http://bbc.co.uk",
+        "resourceName": "Header",
+        "mayReceiveWarnings": true,
+        "htmlCheck": true
+      },
+      {
+        "url": "http://bbc.co.uk",
+        "resourceName": "PLP",
+        "mayReceiveWarnings": true,
+        "htmlCheck": true
+      },
+      {
+        "url": "http://bbc.co.uk",
+        "resourceName": "Product Summary",
+        "mayReceiveWarnings": true,
+        "htmlCheck": true
+      }
+    ]
+  },
+  {
+    "name": "CI EUN API (health)",
+    "endpoints": [
+      {
+        "url": "http://bbc.co.uk",
+        "resourceName": "Footer",
+        "mayReceiveWarnings": true,
+        "htmlCheck": false
+      },
+      {
+        "url": "http://bbc.co.uk",
+        "resourceName": "Header",
+        "mayReceiveWarnings": true,
+        "htmlCheck": false
+      },
+      {
+        "url": "http://bbc.co.uk",
+        "resourceName": "PLP",
+        "mayReceiveWarnings": true,
+        "htmlCheck": false
+      },
+      {
+        "url": "http://bbc.co.uk",
+        "resourceName": "Product Summary",
+        "mayReceiveWarnings": true,
+        "htmlCheck": false
+      }
+    ]
+  },
+  {
+    "name": "CI EUW UI",
+    "endpoints": [
+      {
+        "url": "http://bbc.co.uk",
+        "resourceName": "Footer",
+        "mayReceiveWarnings": true,
+        "htmlCheck": true
+      },
+      {
+        "url": "http://bbc.co.uk",
+        "resourceName": "Header",
+        "mayReceiveWarnings": true,
+        "htmlCheck": true
+      },
+      {
+        "url": "http://bbc.co.uk",
+        "resourceName": "PLP",
+        "mayReceiveWarnings": true,
+        "htmlCheck": true
+      },
+      {
+        "url": "http://bbc.co.uk",
+        "resourceName": "Product Summary",
+        "mayReceiveWarnings": true,
+        "htmlCheck": true
+      }
+    ]
+  },
+  {
+    "name": "CI EUW API (health)",
+    "endpoints": [
+      {
+        "url": "http://bbc.co.uk",
+        "resourceName": "Footer",
+        "mayReceiveWarnings": true,
+        "htmlCheck": false
+      },
+      {
+        "url": "http://bbc.co.uk",
+        "resourceName": "Header",
+        "mayReceiveWarnings": true,
+        "htmlCheck": false
+      },
+      {
+        "url": "http://bbc.co.uk",
+        "resourceName": "PLP",
+        "mayReceiveWarnings": true,
+        "htmlCheck": false
+      },
+      {
+        "url": "http://bbc.co.uk",
+        "resourceName": "Product Summary",
+        "mayReceiveWarnings": true,
+        "htmlCheck": false
+      }
+    ]
+  },
+  {
+    "name": "Pre-Prod EUN UI",
+    "endpoints": [
+      {
+        "url": "http://bbc.co.uk",
+        "resourceName": "Footer",
+        "mayReceiveWarnings": true,
+        "htmlCheck": true
+      },
+      {
+        "url": "http://bbc.co.uk",
+        "resourceName": "Header",
+        "mayReceiveWarnings": true,
+        "htmlCheck": true
+      },
+      {
+        "url": "http://bbc.co.uk",
+        "resourceName": "PLP",
+        "mayReceiveWarnings": true,
+        "htmlCheck": true
+      },
+      {
+        "url": "http://bbc.co.uk",
+        "resourceName": "Product Summary",
+        "mayReceiveWarnings": true,
+        "htmlCheck": true
+      }
+    ]
+  },
+  {
+    "name": "Pre-Prod EUN API (health)",
+    "endpoints": [
+      {
+        "url": "http://bbc.co.uk",
+        "resourceName": "Footer",
+        "mayReceiveWarnings": true,
+        "htmlCheck": false
+      },
+      {
+        "url": "http://bbc.co.uk",
+        "resourceName": "Header",
+        "mayReceiveWarnings": true,
+        "htmlCheck": false
+      },
+      {
+        "url": "http://bbc.co.uk",
+        "resourceName": "PLP",
+        "mayReceiveWarnings": true,
+        "htmlCheck": false
+      },
+      {
+        "url": "http://bbc.co.uk",
+        "resourceName": "Product Summary",
+        "mayReceiveWarnings": true,
+        "htmlCheck": false
+      }
+    ]
+  },
+  {
+    "name": "Pre-Prod EUW UI",
+    "endpoints": [
+      {
+        "url": "http://bbc.co.uk",
+        "resourceName": "Footer",
+        "mayReceiveWarnings": true,
+        "htmlCheck": true
+      },
+      {
+        "url": "http://bbc.co.uk",
+        "resourceName": "Header",
+        "mayReceiveWarnings": true,
+        "htmlCheck": true
+      },
+      {
+        "url": "http://bbc.co.uk",
+        "resourceName": "PLP",
+        "mayReceiveWarnings": true,
+        "htmlCheck": true
+      },
+      {
+        "url": "http://bbc.co.uk",
+        "resourceName": "Product Summary",
+        "mayReceiveWarnings": true,
+        "htmlCheck": true
+      }
+    ]
+  },
+  {
+    "name": "Pre-Prod EUW API (health)",
+    "endpoints": [
+      {
+        "url": "http://bbc.co.uk",
+        "resourceName": "Footer",
+        "mayReceiveWarnings": true,
+        "htmlCheck": false
+      },
+      {
+        "url": "http://bbc.co.uk",
+        "resourceName": "Header",
+        "mayReceiveWarnings": true,
+        "htmlCheck": false
+      },
+      {
+        "url": "http://bbc.co.uk",
+        "resourceName": "PLP",
+        "mayReceiveWarnings": true,
+        "htmlCheck": false
+      },
+      {
+        "url": "http://bbc.co.uk",
+        "resourceName": "Product Summary",
+        "mayReceiveWarnings": true,
+        "htmlCheck": false
       }
     ]
   }

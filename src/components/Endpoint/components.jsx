@@ -35,3 +35,8 @@ export const GoButton = styled.a`
 export const Loading = styled(Loader)`
   margin: 5px;
 `;
+
+export const ResponseTime = styled.span`
+  font-size: .7rem;
+  color: #eee;
+`
