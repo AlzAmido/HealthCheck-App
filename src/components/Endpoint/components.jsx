@@ -37,6 +37,15 @@ export const Loading = styled(Loader)`
 `;
 
 export const ResponseTime = styled.span`
-  font-size: .7rem;
+  font-size: .8rem;
+  color: #e5e340;
+  margin-left: .5rem;
+  font-weight: bold;
+`
+export const ResponseSize = styled.span`
+  font-size: .8rem;
   color: #eee;
+  margin-left: .5rem;
+  padding-right: .2rem;
+  font-weight: bold;
 `
