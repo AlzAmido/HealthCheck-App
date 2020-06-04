@@ -14,6 +14,7 @@ export const EnvironmentContainer = styled.div`
   flex-direction: column;
   border-radius: 5px;
   width: 49%;
+  max-width: 450px;
   margin: 0.2rem;
   border: 1px solid #eee;
   color: #ececec;
