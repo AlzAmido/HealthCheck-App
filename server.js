@@ -1,8 +1,10 @@
 /* eslint-disable prefer-template */
 /* istanbul ignore file */
 const express = require("express");
+const path = require("path");
 const axios = require("axios");
 const responseTime = require("response-time");
+const helmet = require("helmet");
 // const morgan = require("morgan");
 
 const app = express();
@@ -11,7 +13,11 @@ const port = 3333;
 
 // app.use(morgan("dev"));
 app.use(responseTime());
-
+app.use(
+  helmet({
+    frameguard: false
+  })
+);
 app.get("/", async (req, res) => {
   res.setHeader("Content-Type", "text/html; charset=UTF-8");
   res.setHeader("Access-Control-Allow-Origin", "*");
@@ -40,6 +46,8 @@ app.get("/html", async (req, res) => {
     res.status(500).end();
   }
 });
+
+app.use(express.static(path.resolve(__dirname, "./build")));
 
 app.listen(port, () => {
   console.log(`server started at http://localhost:${port}`);
