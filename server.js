@@ -47,7 +47,7 @@ app.get("/html", async (req, res) => {
   }
 });
 
-app.use(express.static(path.resolve(__dirname, "./build")));
+app.use("/healthcheck",express.static(path.resolve(__dirname, "./build")));
 
 app.listen(port, () => {
   console.log(`server started at http://localhost:${port}`);
