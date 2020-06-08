@@ -74,7 +74,7 @@
     "workbox-webpack-plugin": "4.3.1"
   },
   "scripts": {
-    "all": "cross-env ASSETS_PATH=/healthcheck PORT=3331 npm-run-all -p server local",
+    "all": "cross-env ASSETS_PATH= PORT=3331 npm-run-all -p server local",
     "start": "node server.js",
     "local": "cross-env node scripts/start.js",
     "server": "cross-env node server.js",
