@@ -18,7 +18,7 @@ app.use(
     frameguard: false
   })
 );
-app.get("/", async (req, res) => {
+app.get("/api", async (req, res) => {
   res.setHeader("Content-Type", "text/html; charset=UTF-8");
   res.setHeader("Access-Control-Allow-Origin", "*");
   res.setHeader("Access-Control-Expose-Headers", "X-Response-Time");
