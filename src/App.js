@@ -10,9 +10,10 @@ import initialConfig from "./config.json";
 // }
 
 function App() {
-  const initialInterval = localStorage.getItem("healthcheck-interval");
+
+  const initialInterval = localStorage.setItem("healthcheck-interval", 120);
   const [interval, setInterval] = useState(
-    initialInterval ? parseInt(initialInterval) : 30
+    initialInterval ? parseInt(initialInterval) : 120
   );
   const [config, setConfig] = useState(initialConfig);
   return (

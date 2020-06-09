@@ -10,7 +10,7 @@ import {
   ResponseSize
 } from "./components";
 
-const DEFAULT_INTERVAL = 30; // seconds
+const DEFAULT_INTERVAL = 120; // seconds
 
 let ignoreNotifications = false;
 
