@@ -22,7 +22,7 @@ const isUp = async (url, isHtml, interval) => {
   if (url) {
     try {
       const res = await axios.get(
-        `http://localhost:3333${
+        `/${
           isHtml ? "/html" : "/api"
         }?url=${url}&ttl=${interval}`,
         { timeout: (interval || DEFAULT_INTERVAL) * 1000 + 10 } // adding 10ms to make sure server-side ends first
