@@ -26,11 +26,11 @@ app.get("/api", throttle({ burst: 50, period: "60s" }), async (req, res) => {
   res.setHeader("Access-Control-Allow-Origin", "*");
   res.setHeader("Access-Control-Expose-Headers", "X-Response-Time");
   try {
-    const interval = req.query.ttl * 1000;
+    // const interval = req.query.ttl * 1000;
     const cached = cache.get(req.query.url);
     if (!cached) {
       console.log("/api CACHE UPDATE", req.query.url);
-      const response = await axios.get(req.query.url, { timeout: interval });
+      const response = await axios.get(req.query.url, { timeout: 3000 });
       cache.set(
         req.query.url,
         { status: response.status, size: null },
