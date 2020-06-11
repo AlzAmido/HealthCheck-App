@@ -17,8 +17,8 @@ export const IntervalSelector = ({ interval, callback }) => {
         defaultValue={interval}
         onChange={updateInterval}
       >
-        <option value={60}>1min</option>
-        <option value={120}>2min</option>
+        {/* <option value={60}>1min</option>
+        <option value={120}>2min</option> */}
         <option value={300}>5min</option>
         <option value={600}>10min</option>
         <option value={900}>15min</option>

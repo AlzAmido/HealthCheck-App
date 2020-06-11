@@ -10,8 +10,6 @@ import {
   ResponseSize
 } from "./components";
 
-const DEFAULT_INTERVAL = 120; // seconds
-
 let ignoreNotifications = false;
 
 function formatNumber(num) {
@@ -25,9 +23,8 @@ const isUp = async (url, isHtml, interval) => {
         `${
           isHtml ? "/html" : "/api"
         }?url=${url}&ttl=${interval}`,
-        { timeout: (interval || DEFAULT_INTERVAL) * 1000 + 10 } // adding 10ms to make sure server-side ends first
+        { timeout: interval * 1000 + 10 } // adding 10ms to make sure server-side ends first
       );
-      console.log(res);
       return {
         status: res.data.status === 200 ? "green" : "red",
         size: res.data.size,
@@ -52,7 +49,7 @@ export default ({
   const [loading, setLoading] = useState(true);
   useEffect(() => {
     const run = async () => {
-      const newState = await isUp(url, isHtml, interval || DEFAULT_INTERVAL);
+      const newState = await isUp(url, isHtml, interval);
       setState(newState);
       setLoading(false);
     };
@@ -61,7 +58,7 @@ export default ({
     let currentTimeout = setInterval(() => {
       setLoading(true);
       run();
-    }, (interval || DEFAULT_INTERVAL) * 1000);
+    }, interval * 1000);
     return () => {
       clearInterval(currentTimeout);
     };

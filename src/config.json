@@ -3,25 +3,25 @@
     "name": "Sandbox EUN UI",
     "endpoints": [
       {
-        "url": "http://bbc.co.uk",
+        "url": "http://origin-sx-eun.deploy.systems.next/footer",
         "resourceName": "Footer",
         "mayReceiveWarnings": true,
         "htmlCheck": true
       },
       {
-        "url": "http://bbc.co.uk",
+        "url": "http://origin-sx-eun.deploy.systems.next/header",
         "resourceName": "Header",
         "mayReceiveWarnings": true,
         "htmlCheck": true
       },
       {
-        "url": "http://bbc.co.uk",
+        "url": "http://origin-sx-eun.deploy.systems.next/shop/gender-women-productaffiliation-coatsandjackets-0",
         "resourceName": "PLP",
         "mayReceiveWarnings": true,
         "htmlCheck": true
       },
       {
-        "url": "http://bbc.co.uk",
+        "url": "http://origin-sx-eun.deploy.systems.next/product-summary/122589",
         "resourceName": "Product Summary",
         "mayReceiveWarnings": true,
         "htmlCheck": true
@@ -32,25 +32,25 @@
     "name": "Sandbox EUN API (health)",
     "endpoints": [
       {
-        "url": "http://bbc.co.uk",
+        "url": "http://origin-sx-eun.deploy.systems.next/api/footer/health",
         "resourceName": "Footer",
         "mayReceiveWarnings": true,
         "htmlCheck": false
       },
       {
-        "url": "http://bbc.co.uk",
+        "url": "http://origin-sx-eun.deploy.systems.next/api/header/health",
         "resourceName": "Header",
         "mayReceiveWarnings": true,
         "htmlCheck": false
       },
       {
-        "url": "http://bbc.co.uk",
+        "url": "http://origin-sx-eun.deploy.systems.next/api/search/health",
         "resourceName": "PLP",
         "mayReceiveWarnings": true,
         "htmlCheck": false
       },
       {
-        "url": "http://bbc.co.uk",
+        "url": "http://origin-sx-eun.deploy.systems.next/api/product-summary/health",
         "resourceName": "Product Summary",
         "mayReceiveWarnings": true,
         "htmlCheck": false
@@ -61,25 +61,25 @@
     "name": "Sandbox EUW UI",
     "endpoints": [
       {
-        "url": "http://bbc.co.uk",
+        "url": "http://origin-sx-euw.deploy.systems.next/footer",
         "resourceName": "Footer",
         "mayReceiveWarnings": true,
         "htmlCheck": true
       },
       {
-        "url": "http://bbc.co.uk",
+        "url": "http://origin-sx-euw.deploy.systems.next/header",
         "resourceName": "Header",
         "mayReceiveWarnings": true,
         "htmlCheck": true
       },
       {
-        "url": "http://bbc.co.uk",
+        "url": "http://origin-sx-euw.deploy.systems.next/shop/gender-women-productaffiliation-coatsandjackets-0",
         "resourceName": "PLP",
         "mayReceiveWarnings": true,
         "htmlCheck": true
       },
       {
-        "url": "http://bbc.co.uk",
+        "url": "http://origin-sx-euw.deploy.systems.next/product-summary/122589",
         "resourceName": "Product Summary",
         "mayReceiveWarnings": true,
         "htmlCheck": true
@@ -90,25 +90,25 @@
     "name": "Sandbox EUW API (health)",
     "endpoints": [
       {
-        "url": "http://bbc.co.uk",
+        "url": "http://origin-sx-euw.deploy.systems.next/api/footer/health",
         "resourceName": "Footer",
         "mayReceiveWarnings": true,
         "htmlCheck": false
       },
       {
-        "url": "http://bbc.co.uk",
+        "url": "http://origin-sx-euw.deploy.systems.next/api/header/health",
         "resourceName": "Header",
         "mayReceiveWarnings": true,
         "htmlCheck": false
       },
       {
-        "url": "http://bbc.co.uk",
+        "url": "http://origin-sx-euw.deploy.systems.next/api/search/health",
         "resourceName": "PLP",
         "mayReceiveWarnings": true,
         "htmlCheck": false
       },
       {
-        "url": "http://bbc.co.uk",
+        "url": "http://origin-sx-euw.deploy.systems.next/api/product-summary/health",
         "resourceName": "Product Summary",
         "mayReceiveWarnings": true,
         "htmlCheck": false
@@ -119,25 +119,25 @@
     "name": "CI EUN UI",
     "endpoints": [
       {
-        "url": "http://bbc.co.uk",
+        "url": "https://origin-ci-browse-cloud-eun.origins.systems.next/footer",
         "resourceName": "Footer",
         "mayReceiveWarnings": true,
         "htmlCheck": true
       },
       {
-        "url": "http://bbc.co.uk",
+        "url": "https://origin-ci-browse-cloud-eun.origins.systems.next/header",
         "resourceName": "Header",
         "mayReceiveWarnings": true,
         "htmlCheck": true
       },
       {
-        "url": "http://bbc.co.uk",
+        "url": "https://origin-ci-browse-cloud-eun.origins.systems.next/shop/gender-women-productaffiliation-coatsandjackets-0",
         "resourceName": "PLP",
         "mayReceiveWarnings": true,
         "htmlCheck": true
       },
       {
-        "url": "http://bbc.co.uk",
+        "url": "https://origin-ci-browse-cloud-eun.origins.systems.next/product-summary/122589",
         "resourceName": "Product Summary",
         "mayReceiveWarnings": true,
         "htmlCheck": true
@@ -148,25 +148,25 @@
     "name": "CI EUN API (health)",
     "endpoints": [
       {
-        "url": "http://bbc.co.uk",
+        "url": "https://origin-ci-browse-cloud-eun.origins.systems.next/api/footer/health",
         "resourceName": "Footer",
         "mayReceiveWarnings": true,
         "htmlCheck": false
       },
       {
-        "url": "http://bbc.co.uk",
+        "url": "https://origin-ci-browse-cloud-eun.origins.systems.next/api/header/health",
         "resourceName": "Header",
         "mayReceiveWarnings": true,
         "htmlCheck": false
       },
       {
-        "url": "http://bbc.co.uk",
+        "url": "https://origin-ci-browse-cloud-eun.origins.systems.next/api/search/health",
         "resourceName": "PLP",
         "mayReceiveWarnings": true,
         "htmlCheck": false
       },
       {
-        "url": "http://bbc.co.uk",
+        "url": "https://origin-ci-browse-cloud-eun.origins.systems.next/api/product-summary/health",
         "resourceName": "Product Summary",
         "mayReceiveWarnings": true,
         "htmlCheck": false
@@ -177,25 +177,25 @@
     "name": "CI EUW UI",
     "endpoints": [
       {
-        "url": "http://bbc.co.uk",
+        "url": "https://origin-ci-browse-cloud-euw.origins.systems.next/footer",
         "resourceName": "Footer",
         "mayReceiveWarnings": true,
         "htmlCheck": true
       },
       {
-        "url": "http://bbc.co.uk",
+        "url": "https://origin-ci-browse-cloud-euw.origins.systems.next/header",
         "resourceName": "Header",
         "mayReceiveWarnings": true,
         "htmlCheck": true
       },
       {
-        "url": "http://bbc.co.uk",
+        "url": "https://origin-ci-browse-cloud-euw.origins.systems.next/shop/gender-women-productaffiliation-coatsandjackets-0",
         "resourceName": "PLP",
         "mayReceiveWarnings": true,
         "htmlCheck": true
       },
       {
-        "url": "http://bbc.co.uk",
+        "url": "https://origin-ci-browse-cloud-euw.origins.systems.next/product-summary/122589",
         "resourceName": "Product Summary",
         "mayReceiveWarnings": true,
         "htmlCheck": true
@@ -206,25 +206,25 @@
     "name": "CI EUW API (health)",
     "endpoints": [
       {
-        "url": "http://bbc.co.uk",
+        "url": "https://origin-ci-browse-cloud-euw.origins.systems.next/api/footer/health",
         "resourceName": "Footer",
         "mayReceiveWarnings": true,
         "htmlCheck": false
       },
       {
-        "url": "http://bbc.co.uk",
+        "url": "https://origin-ci-browse-cloud-euw.origins.systems.next/api/header/health",
         "resourceName": "Header",
         "mayReceiveWarnings": true,
         "htmlCheck": false
       },
       {
-        "url": "http://bbc.co.uk",
+        "url": "https://origin-ci-browse-cloud-euw.origins.systems.next/api/search/health",
         "resourceName": "PLP",
         "mayReceiveWarnings": true,
         "htmlCheck": false
       },
       {
-        "url": "http://bbc.co.uk",
+        "url": "https://origin-ci-browse-cloud-euw.origins.systems.next/api/product-summary/health",
         "resourceName": "Product Summary",
         "mayReceiveWarnings": true,
         "htmlCheck": false
@@ -235,25 +235,25 @@
     "name": "Pre-Prod EUN UI",
     "endpoints": [
       {
-        "url": "http://bbc.co.uk",
+        "url": "https://origin-pp-browse-cloud-eun.origins.systems.next/footer",
         "resourceName": "Footer",
         "mayReceiveWarnings": true,
         "htmlCheck": true
       },
       {
-        "url": "http://bbc.co.uk",
+        "url": "https://origin-pp-browse-cloud-eun.origins.systems.next/header",
         "resourceName": "Header",
         "mayReceiveWarnings": true,
         "htmlCheck": true
       },
       {
-        "url": "http://bbc.co.uk",
+        "url": "https://origin-pp-browse-cloud-eun.origins.systems.next/shop/gender-women-productaffiliation-coatsandjackets-0",
         "resourceName": "PLP",
         "mayReceiveWarnings": true,
         "htmlCheck": true
       },
       {
-        "url": "http://bbc.co.uk",
+        "url": "https://origin-pp-browse-cloud-eun.origins.systems.next/product-summary/122589",
         "resourceName": "Product Summary",
         "mayReceiveWarnings": true,
         "htmlCheck": true
@@ -264,25 +264,25 @@
     "name": "Pre-Prod EUN API (health)",
     "endpoints": [
       {
-        "url": "http://bbc.co.uk",
+        "url": "https://origin-pp-browse-cloud-eun.origins.systems.next/api/footer/health",
         "resourceName": "Footer",
         "mayReceiveWarnings": true,
         "htmlCheck": false
       },
       {
-        "url": "http://bbc.co.uk",
+        "url": "https://origin-pp-browse-cloud-eun.origins.systems.next/api/header/health",
         "resourceName": "Header",
         "mayReceiveWarnings": true,
         "htmlCheck": false
       },
       {
-        "url": "http://bbc.co.uk",
+        "url": "https://origin-pp-browse-cloud-eun.origins.systems.next/api/search/health",
         "resourceName": "PLP",
         "mayReceiveWarnings": true,
         "htmlCheck": false
       },
       {
-        "url": "http://bbc.co.uk",
+        "url": "https://origin-pp-browse-cloud-eun.origins.systems.next/api/product-summary/health",
         "resourceName": "Product Summary",
         "mayReceiveWarnings": true,
         "htmlCheck": false
@@ -293,25 +293,25 @@
     "name": "Pre-Prod EUW UI",
     "endpoints": [
       {
-        "url": "http://bbc.co.uk",
+        "url": "https://origin-pp-browse-cloud-euw.origins.systems.next/footer",
         "resourceName": "Footer",
         "mayReceiveWarnings": true,
         "htmlCheck": true
       },
       {
-        "url": "http://bbc.co.uk",
+        "url": "https://origin-pp-browse-cloud-euw.origins.systems.next/header",
         "resourceName": "Header",
         "mayReceiveWarnings": true,
         "htmlCheck": true
       },
       {
-        "url": "http://bbc.co.uk",
+        "url": "https://origin-pp-browse-cloud-euw.origins.systems.next/shop/gender-women-productaffiliation-coatsandjackets-0",
         "resourceName": "PLP",
         "mayReceiveWarnings": true,
         "htmlCheck": true
       },
       {
-        "url": "http://bbc.co.uk",
+        "url": "https://origin-pp-browse-cloud-euw.origins.systems.next/product-summary/122589",
         "resourceName": "Product Summary",
         "mayReceiveWarnings": true,
         "htmlCheck": true
@@ -322,25 +322,141 @@
     "name": "Pre-Prod EUW API (health)",
     "endpoints": [
       {
-        "url": "http://bbc.co.uk",
+        "url": "https://origin-pp-browse-cloud-euw.origins.systems.next/api/footer/health",
         "resourceName": "Footer",
         "mayReceiveWarnings": true,
         "htmlCheck": false
       },
       {
-        "url": "http://bbc.co.uk",
+        "url": "https://origin-pp-browse-cloud-euw.origins.systems.next/api/header/health",
         "resourceName": "Header",
         "mayReceiveWarnings": true,
         "htmlCheck": false
       },
       {
-        "url": "http://bbc.co.uk",
+        "url": "https://origin-pp-browse-cloud-euw.origins.systems.next/api/search/health",
         "resourceName": "PLP",
         "mayReceiveWarnings": true,
         "htmlCheck": false
       },
       {
-        "url": "http://bbc.co.uk",
+        "url": "https://origin-pp-browse-cloud-euw.origins.systems.next/api/product-summary/health",
+        "resourceName": "Product Summary",
+        "mayReceiveWarnings": true,
+        "htmlCheck": false
+      }
+    ]
+  },
+  {
+    "name": "Prod EUW UI",
+    "endpoints": [
+      {
+        "url": "https://origin-prod-browse-cloud-euw.origins.systems.next/footer",
+        "resourceName": "Footer",
+        "mayReceiveWarnings": true,
+        "htmlCheck": true
+      },
+      {
+        "url": "https://origin-prod-browse-cloud-euw.origins.systems.next/header",
+        "resourceName": "Header",
+        "mayReceiveWarnings": true,
+        "htmlCheck": true
+      },
+      {
+        "url": "https://origin-prod-browse-cloud-euw.origins.systems.next/shop/gender-women-productaffiliation-coatsandjackets-0",
+        "resourceName": "PLP",
+        "mayReceiveWarnings": true,
+        "htmlCheck": true
+      },
+      {
+        "url": "https://origin-prod-browse-cloud-euw.origins.systems.next/product-summary/122589",
+        "resourceName": "Product Summary",
+        "mayReceiveWarnings": true,
+        "htmlCheck": true
+      }
+    ]
+  },
+  {
+    "name": "Prod EUW API (health)",
+    "endpoints": [
+      {
+        "url": "https://origin-prod-browse-cloud-euw.origins.systems.next/api/footer/health",
+        "resourceName": "Footer",
+        "mayReceiveWarnings": true,
+        "htmlCheck": false
+      },
+      {
+        "url": "https://origin-prod-browse-cloud-euw.origins.systems.next/api/header/health",
+        "resourceName": "Header",
+        "mayReceiveWarnings": true,
+        "htmlCheck": false
+      },
+      {
+        "url": "https://origin-prod-browse-cloud-euw.origins.systems.next/api/search/health",
+        "resourceName": "PLP",
+        "mayReceiveWarnings": true,
+        "htmlCheck": false
+      },
+      {
+        "url": "https://origin-prod-browse-cloud-euw.origins.systems.next/api/product-summary/health",
+        "resourceName": "Product Summary",
+        "mayReceiveWarnings": true,
+        "htmlCheck": false
+      }
+    ]
+  },
+  {
+    "name": "Prod EUN UI",
+    "endpoints": [
+      {
+        "url": "https://origin-prod-browse-cloud-eun.origins.systems.next/footer",
+        "resourceName": "Footer",
+        "mayReceiveWarnings": true,
+        "htmlCheck": true
+      },
+      {
+        "url": "https://origin-prod-browse-cloud-eun.origins.systems.next/header",
+        "resourceName": "Header",
+        "mayReceiveWarnings": true,
+        "htmlCheck": true
+      },
+      {
+        "url": "https://origin-prod-browse-cloud-eun.origins.systems.next/shop/gender-women-productaffiliation-coatsandjackets-0",
+        "resourceName": "PLP",
+        "mayReceiveWarnings": true,
+        "htmlCheck": true
+      },
+      {
+        "url": "https://origin-prod-browse-cloud-eun.origins.systems.next/product-summary/122589",
+        "resourceName": "Product Summary",
+        "mayReceiveWarnings": true,
+        "htmlCheck": true
+      }
+    ]
+  },
+  {
+    "name": "Prod EUN API (health)",
+    "endpoints": [
+      {
+        "url": "https://origin-prod-browse-cloud-eun.origins.systems.next/api/footer/health",
+        "resourceName": "Footer",
+        "mayReceiveWarnings": true,
+        "htmlCheck": false
+      },
+      {
+        "url": "https://origin-prod-browse-cloud-eun.origins.systems.next/api/header/health",
+        "resourceName": "Header",
+        "mayReceiveWarnings": true,
+        "htmlCheck": false
+      },
+      {
+        "url": "https://origin-prod-browse-cloud-eun.origins.systems.next/api/search/health",
+        "resourceName": "PLP",
+        "mayReceiveWarnings": true,
+        "htmlCheck": false
+      },
+      {
+        "url": "https://origin-prod-browse-cloud-eun.origins.systems.next/api/product-summary/health",
         "resourceName": "Product Summary",
         "mayReceiveWarnings": true,
         "htmlCheck": false

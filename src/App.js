@@ -8,17 +8,18 @@ import initialConfig from "./config.json";
 // if (!global._babelPolyfill && !window._babelPolyfill) {
 //   require("babel-polyfill");
 // }
-
+const DEFAULT_INTERVAL = 300; // seconds
 function App() {
-
-  const initialInterval = localStorage.setItem("healthcheck-interval", 120);
+  let initialInterval = localStorage.getItem("healthcheck-interval");
+  initialInterval =
+    initialInterval > DEFAULT_INTERVAL ? initialInterval : DEFAULT_INTERVAL;
   const [interval, setInterval] = useState(
-    initialInterval ? parseInt(initialInterval) : 120
+    initialInterval ? parseInt(initialInterval) : DEFAULT_INTERVAL
   );
   const [config, setConfig] = useState(initialConfig);
   return (
     <div className="App">
-      <div style={{ display: "flex", justifyContent:"space-between" }}>
+      <div style={{ display: "flex", justifyContent: "space-between" }}>
         <IntervalSelector interval={interval} callback={setInterval} />
         <Settings initialConfig={config} setConfig={setConfig} />
       </div>
