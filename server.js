@@ -12,7 +12,7 @@ const NodeCache = require("node-cache");
 const app = express();
 const cache = new NodeCache();
 const port = 3333;
-const CACHE_TTL = 290000;
+const CACHE_TTL = 300;
 
 // app.use(morgan("dev"));
 app.use(responseTime());
